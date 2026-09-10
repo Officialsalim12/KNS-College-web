@@ -690,6 +690,8 @@ code {
     display: flex;
     align-items: center;
     box-sizing: border-box;
+    margin-left: 0;
+    margin-right: 0;
 }
 
 @media (max-width: 768px) {
@@ -700,6 +702,10 @@ code {
         padding: var(--spacing-lg) var(--spacing-md);
         border-radius: 0;
         margin-bottom: var(--spacing-md);
+        width: 100%;
+        max-width: 100%;
+        margin-left: 0;
+        margin-right: 0;
     }
 }
 
@@ -707,6 +713,21 @@ code {
     .hero-section {
         min-height: 350px;
         padding: var(--spacing-md) var(--spacing-sm);
+        width: 100%;
+        max-width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 320px) {
+    .hero-section {
+        min-height: 300px;
+        padding: var(--spacing-sm) var(--spacing-xs);
+        width: 100%;
+        max-width: 100%;
+        margin-left: 0;
+        margin-right: 0;
     }
 }
 
@@ -2761,6 +2782,8 @@ code {
     align-items: center;
     overflow: hidden;
     width: 100%;
+    max-width: 100%;
+    margin: 0;
 }
 
 @media (max-width: 768px) {
@@ -2769,6 +2792,8 @@ code {
         background-position: center center;
         min-height: 500px;
         padding: clamp(20px, 5vh, 60px) 0;
+        width: 100%;
+        max-width: 100%;
     }
 }
 
@@ -2776,6 +2801,8 @@ code {
     .home-hero {
         min-height: 400px;
         padding: clamp(15px, 4vh, 48px) 0;
+        width: 100%;
+        max-width: 100%;
     }
 }
 
@@ -14698,6 +14725,50 @@ body.kns-cart-open:not(.kns-modal-open) .kns-cart-drawer__panel {
         max-width: 100%;
         box-sizing: border-box;
     }
+
+    .home-hero,
+    .hero-section {
+        max-width: 100%;
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+/* Small screens optimization */
+@media (max-width: 768px) {
+    .main-content {
+        padding: var(--spacing-md);
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+    }
+
+    .home-hero,
+    .hero-section {
+        width: 100%;
+        max-width: 100%;
+        margin-left: -16px;
+        margin-right: -16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-content {
+        padding: var(--spacing-sm);
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+    }
+
+    .home-hero,
+    .hero-section {
+        width: 100%;
+        max-width: 100%;
+        margin-left: -12px;
+        margin-right: -12px;
+    }
+}
 
     /* Keep chatbot / WhatsApp above the bottom CTA bar */
     .chatbot-container {
