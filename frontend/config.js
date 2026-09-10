@@ -13,12 +13,13 @@ function normalizeApiUrl(url) {
     return 'https://' + url;
 }
 
-const KNS_DEFAULT_RENDER_API = 'https://kns-college-website.onrender.com';
+const KNS_DEFAULT_RENDER_API = 'https://kns-college-web.onrender.com';
 
 function isAllowedStoredApiBaseUrl(normalized) {
     if (!normalized) return false;
     if (normalized.includes('kns.edu.sl')) return true;
     if (normalized.includes('kns-college-website.onrender.com')) return true;
+    if (normalized.includes('kns-college-web.onrender.com')) return true;
     if (/^https?:\/\/localhost(?::\d+)?(\/|$)/i.test(normalized)) return true;
     if (/^https?:\/\/127\.0\.0\.1(?::\d+)?(\/|$)/i.test(normalized)) return true;
     return false;
@@ -118,7 +119,7 @@ if (typeof window !== 'undefined') {
 
 const CONFIG = {
     API_BASE_URL: calculatedApiBaseUrl,
-    PRODUCTION_API_URL: 'https://kns.edu.sl',
+    PRODUCTION_API_URL: 'https://kns-college-web.onrender.com',
     
     ENDPOINTS: {
         MESSAGES: '/api/messages',
