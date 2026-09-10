@@ -7,7 +7,8 @@ const APPLICATION_FEE_SLE = 250;
 const SCHOLARSHIP_FILE_ALLOWED_HOSTS = new Set([
     'kns.edu.sl',
     'www.kns.edu.sl',
-    'kns-college-website.onrender.com'
+    'kns-college-website.onrender.com',
+    'kns-college-web.onrender.com'
 ]);
 
 function escapeHtml(value) {

@@ -16,7 +16,7 @@ function loadScholarships(scholarshipsGrid) {
 
     const apiBaseUrl = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
         ? 'http://localhost:3000'
-        : 'https://kns-college-website.onrender.com';
+        : 'https://kns-college-web.onrender.com';
 
     const fullUrl = `${apiBaseUrl}/api/scholarships`;
     console.log('Fetching from:', fullUrl);
