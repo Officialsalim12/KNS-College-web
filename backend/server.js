@@ -413,7 +413,18 @@ function getUserAgent(req) {
 }
 
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'index.html'));
+    res.json({
+        message: 'KNS College API',
+        version: '1.0.0',
+        endpoints: {
+            health: '/api/health',
+            scholarships: '/api/scholarships',
+            scholarshipDetail: '/api/scholarships/:id',
+            scholarshipApplications: '/api/scholarship-applications',
+            contact: '/api/contact',
+            enquiry: '/api/enquiry'
+        }
+    });
 });
 
 app.get('/api/health', (req, res) => {
@@ -2516,7 +2527,9 @@ app.post(
     }
 );
 
-app.use(express.static(path.join(__dirname, '../frontend')));
+// Static frontend files are deployed separately on Sectorlink
+// Comment out for API-only deployment
+// app.use(express.static(path.join(__dirname, '../frontend')));
 
 app.use('/scholarships', express.static(path.join(__dirname, 'scholarships'), {
     setHeaders: (res, path) => {
