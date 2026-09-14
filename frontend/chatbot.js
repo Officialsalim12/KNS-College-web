@@ -25,8 +25,6 @@
             { name: 'Cisco Certified Support Technician (IT Support)', keywords: ['cisco it support', 'ccst it', 'it support', 'cisco support'], type: 'certificate', duration: '16 Weeks', mode: 'Online / Tutor-Led' },
             { name: 'Cisco Certified Support Technician (Cybersecurity)', keywords: ['cisco cybersecurity', 'ccst cybersecurity', 'cisco security'], type: 'certificate', duration: '16 Weeks', mode: 'Online / Tutor-Led' },
             { name: 'Cisco Certified Support Technician (Networking)', keywords: ['cisco networking', 'ccst networking', 'cisco network'], type: 'certificate', duration: '16 Weeks', mode: 'Online / Tutor-Led' },
-            { name: 'AutoDesk Certified User - Revit Architecture', keywords: ['revit', 'autodesk revit', 'bim', 'architecture'], type: 'certificate', duration: '16 Weeks', mode: 'Instructor-Led' },
-            { name: 'AutoDesk Certified User - AutoCAD', keywords: ['autocad', 'autodesk autocad', 'cad', 'drafting'], type: 'certificate', duration: '16 Weeks', mode: 'Online / Instructor-Led' },
             { name: 'Microsoft Certified: AI-900 Azure AI Fundamentals', keywords: ['ai900', 'azure ai', 'ai fundamentals', 'microsoft ai'], type: 'certificate', duration: '4 Weeks', mode: 'Instructor-Led' },
             { name: 'Microsoft Certified: AZ-900 Azure Fundamentals', keywords: ['az900', 'azure fundamentals', 'azure', 'cloud'], type: 'certificate', duration: '4 Weeks', mode: 'Instructor-Led' },
             { name: 'Microsoft Certified: DP-900 Azure Data Fundamentals', keywords: ['dp900', 'azure data', 'data fundamentals'], type: 'certificate', duration: '4 Weeks', mode: 'Instructor-Led' },
@@ -144,11 +142,6 @@
             answer: 'Yes! We offer Certificate programmes for Microsoft certifications including: Azure Fundamentals (AZ900), Azure AI Fundamentals (AI900), Azure Data Fundamentals (DP900), Microsoft 365 Fundamentals (MS900), Power Platform Fundamentals (PL900), Security Fundamentals (SC900), and Microsoft Office Specialist (MOS).'
         },
         {
-            keywords: ['autocad', 'autodesk', 'revit', 'cad', 'drafting', 'architecture', 'engineering design'],
-            question: 'Do you offer AutoCAD or Autodesk programmes?',
-            answer: 'Yes! We offer Certificate programmes in Autodesk Certified User  AutoCAD and Autodesk Certified User  Revit Architecture. Learn 2D/3D CAD design, BIM modeling, and technical drawing skills for engineering and architecture.'
-        },
-        {
             keywords: ['telecommunications', 'telecom', 'telecommunication', 'mobile network', 'fiber', 'network engineer'],
             question: 'Do you offer telecommunications programmes?',
             answer: 'Yes! We offer a Diploma in Telecommunications (2 years) covering modern telecommunication systems, mobile networks, fiber optics, and network management. This programme includes PMI Project Management Ready certification and prepares you for careers in Sierra Leone\'s telecom sector.'
@@ -225,11 +218,6 @@
             keywords: ['intuit', 'quickbooks', 'bookkeeping', 'bookkeeper', 'accounting software'],
             question: 'What Intuit certifications do you offer?',
             answer: 'Our Diploma in Applied Computerised Accounting & Intuit QuickBooks Technology prepares you for Intuit Certified Bookkeeping Professional certification. Learn QuickBooks and modern accounting software through handson training.'
-        },
-        {
-            keywords: ['autodesk certification', 'autocad certification', 'revit certification'],
-            question: 'What Autodesk certifications do you offer?',
-            answer: 'We offer Certificate programmes for Autodesk Certified User  AutoCAD and Autodesk Certified User  Revit Architecture. These certifications validate your skills in CAD design and BIM modeling.'
         },
         {
             keywords: ['testing', 'exam', 'test center', 'pearson vue', 'certiport', 'take exam', 'where to take exam'],

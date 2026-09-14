@@ -831,7 +831,6 @@ code {
     padding: var(--spacing-md);
     background-color: var(--background-light);
     border-radius: 6px;
-    border-left: 4px solid var(--primary-color);
 }
 
 .detail-label {
@@ -2549,6 +2548,7 @@ code {
     /* Content Section Responsive */
     .content-wrapper {
         grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
     }
     
     .content-sidebar {
@@ -3899,6 +3899,44 @@ code {
     background-color: var(--background-color);
 }
 
+/* Full width content section for certification details */
+.content-section-full-width {
+    padding: var(--spacing-xl) 0;
+    background-color: var(--background-color);
+    width: 100%;
+    max-width: 100%;
+}
+
+.content-section-full-width .container {
+    width: 100%;
+    max-width: 100%;
+    padding-left: var(--spacing-xl);
+    padding-right: var(--spacing-xl);
+    box-sizing: border-box;
+}
+
+.content-main-full {
+    width: 100%;
+    max-width: 100%;
+}
+
+/* Constrain form width in full-width sections */
+.content-main-full .application-form {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Center alert boxes in full-width forms */
+.content-main-full .alert-box {
+    text-align: center;
+}
+
+/* Center deadline note */
+.content-main-full .deadline-note {
+    text-align: center;
+    font-style: normal;
+}
+
 .content-wrapper {
     display: grid;
     grid-template-columns: 1fr;
@@ -4028,7 +4066,6 @@ code {
     padding: var(--spacing-lg);
     background-color: var(--background-light);
     border-radius: 8px;
-    border-left: 4px solid var(--primary-color);
 }
 
 .vm-title {
@@ -4110,7 +4147,6 @@ code {
     padding: var(--spacing-md);
     background-color: var(--background-light);
     border-radius: 8px;
-    border-left: 4px solid var(--primary-color);
     text-align: center;
 }
 
@@ -4144,7 +4180,6 @@ code {
     background-color: var(--background-light);
     padding: var(--spacing-lg);
     border-radius: 8px;
-    border-left: 4px solid var(--primary-color);
     text-align: center;
 }
 
@@ -4346,7 +4381,6 @@ code {
     margin-top: var(--spacing-sm);
     padding: var(--spacing-sm);
     background-color: #f0f7ff;
-    border-left: 4px solid #0066cc;
     border-radius: 4px;
     font-size: 0.9em;
     line-height: 1.5;
@@ -4437,7 +4471,6 @@ code {
     background-color: var(--background-light);
     padding: var(--spacing-lg);
     border-radius: 8px;
-    border-left: 4px solid var(--primary-color);
     margin: var(--spacing-lg) 0;
 }
 
@@ -4763,7 +4796,6 @@ code {
     margin-bottom: var(--spacing-sm);
     font-weight: 600;
     padding-left: var(--spacing-md);
-    border-left: 4px solid var(--primary-color);
     line-height: 1.3;
 }
 
@@ -4972,7 +5004,6 @@ code {
     background-color: var(--background-light);
     padding: var(--spacing-lg);
     border-radius: 8px;
-    border-left: 4px solid var(--primary-color);
 }
 
 .year-title {
@@ -5026,7 +5057,6 @@ code {
     background-color: var(--background-light);
     padding: var(--spacing-lg);
     border-radius: 8px;
-    border-left: 4px solid var(--primary-color);
     text-align: center;
 }
 
@@ -5057,7 +5087,6 @@ code {
     padding: var(--spacing-md);
     background-color: var(--background-light);
     border-radius: 6px;
-    border-left: 4px solid var(--primary-color);
 }
 
 .requirement-title {
@@ -5217,7 +5246,6 @@ code {
     padding: var(--spacing-md);
     background-color: var(--background-light);
     border-radius: 6px;
-    border-left: 4px solid var(--primary-color);
 }
 
 .contact-icon {
@@ -6053,7 +6081,6 @@ code {
     gap: var(--spacing-md);
     padding: var(--spacing-lg);
     background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
-    border-left: 4px solid var(--primary-color);
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(26, 77, 122, 0.1);
 }
@@ -7305,7 +7332,6 @@ code {
     padding: var(--spacing-lg);
     border-radius: 8px;
     margin: var(--spacing-xl) 0;
-    border-left: 4px solid var(--primary-color);
 }
 
 .contact-heading {
@@ -10196,12 +10222,10 @@ code {
     padding: var(--spacing-md);
     border-radius: 6px;
     margin-bottom: var(--spacing-lg);
-    border-left: 4px solid;
 }
 
 .alert-info {
     background-color: #e7f3ff;
-    border-left-color: var(--primary-color);
     color: var(--text-color);
 }
 
@@ -14772,16 +14796,8 @@ body.kns-cart-open:not(.kns-modal-open) .kns-cart-drawer__panel {
         margin-left: -12px;
         margin-right: -12px;
     }
-}
 
     /* Keep chatbot / WhatsApp above the bottom CTA bar */
-    .chatbot-container {
-        bottom: calc(5.75rem + env(safe-area-inset-bottom, 0px)) !important;
-        right: calc(12px + env(safe-area-inset-right, 0px)) !important;
-    }
-}
-
-@media (max-width: 480px) {
     .chatbot-container {
         bottom: calc(6.5rem + env(safe-area-inset-bottom, 0px)) !important;
     }

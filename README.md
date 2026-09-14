@@ -2,6 +2,18 @@
 
 Website and API for KNS College — a static multi-page site (programmes, admissions, certifications, scholarships, training, online courses) backed by a Node.js/Express API for enquiries, registrations, payments, and scholarship applications.
 
+## Recent Updates
+
+- **Course Updates:**
+  - Moved "Digital Marketing with Meta Certified" from Diploma to Certificate (Business School)
+  - Moved "Data Analyst" from Certificate (Business) to Certificate (Technology School)
+  - Removed AutoDesk Certified User - Revit Architecture and AutoDesk Certified User - AutoCAD courses
+- **Content Improvements:**
+  - Removed AI references throughout the site
+  - Simplified professional layout (removed AI-style cards, blue left borders)
+  - Updated scholarship information to reflect partial funding only
+  - Standardized intake period display across all pages
+
 ## Tech Stack
 
 - **Frontend:** Static HTML/CSS/JavaScript (no build step)
