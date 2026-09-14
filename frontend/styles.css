@@ -8432,7 +8432,7 @@ code {
         display: block;
         width: 100%;
         height: 120px;
-        background-image: url('images/kns-college-logo.png');
+        background-image: url('images/kns_college_logo.jpg');
         background-repeat: no-repeat;
         background-position: center;
         background-size: auto 100px;
@@ -14191,7 +14191,7 @@ body.kns-cart-open:not(.kns-modal-open) .kns-cart-drawer__panel {
         display: block;
         width: 100%;
         height: 120px;
-        background-image: url('images/kns-college-logo.png');
+        background-image: url('images/kns_college_logo.jpg');
         background-repeat: no-repeat;
         background-position: center;
         background-size: auto 100px;
