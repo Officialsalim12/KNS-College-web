@@ -118,6 +118,10 @@ body.is-page-loading {
     box-sizing: border-box;
 }
 
+body.is-inline-loading {
+    overflow: hidden;
+}
+
 .inline-loader .loader {
     width: 40px;
 }

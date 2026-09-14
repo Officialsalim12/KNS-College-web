@@ -14,6 +14,9 @@ document.addEventListener('DOMContentLoaded', function() {
 function loadScholarships(scholarshipsGrid) {
     console.log('Loading scholarships...');
 
+    // Prevent scrolling while loading
+    document.body.classList.add('is-inline-loading');
+
     const apiBaseUrl = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
         ? 'http://localhost:3000'
         : 'https://kns-college-web.onrender.com';
@@ -44,6 +47,7 @@ function loadScholarships(scholarshipsGrid) {
 
         if (!result.scholarships || result.scholarships.length === 0) {
             scholarshipsGrid.innerHTML = '<p class="content-text">No scholarships are currently available. Please check back later.</p>';
+            document.body.classList.remove('is-inline-loading');
             return;
         }
 
@@ -51,6 +55,9 @@ function loadScholarships(scholarshipsGrid) {
         result.scholarships.forEach(scholarship => {
             scholarshipsGrid.appendChild(createScholarshipCard(scholarship));
         });
+
+        // Re-enable scrolling after loading
+        document.body.classList.remove('is-inline-loading');
     })
     .catch(error => {
         console.error('Error loading scholarships:', error);
@@ -60,6 +67,9 @@ function loadScholarships(scholarshipsGrid) {
                 <p style="font-size: 0.9em; color: #666; margin-top: 0.5em;">Error: ${escapeHtml(error.message)}</p>
             </div>
         `;
+
+        // Re-enable scrolling on error
+        document.body.classList.remove('is-inline-loading');
     });
 }
 

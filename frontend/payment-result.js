@@ -31,6 +31,14 @@
 
     const params = new URLSearchParams(window.location.search);
 
+    // Prevent scrolling while loading payment result
+    document.body.classList.add('is-inline-loading');
+
+    // Fallback: ensure scrolling is re-enabled after 10 seconds
+    setTimeout(function() {
+        document.body.classList.remove('is-inline-loading');
+    }, 10000);
+
     if (document.body.classList.contains('page-payment-result--success')) {
         try {
             if (typeof KNSCart !== 'undefined' && KNSCart.clear) {
@@ -189,7 +197,10 @@
         }
 
         const loading = document.getElementById('payment-result-loading');
-        if (loading) loading.hidden = true;
+        if (loading) {
+            loading.hidden = true;
+            document.body.classList.remove('is-inline-loading');
+        }
 
         const modal = document.querySelector('.payment-result-modal');
         if (modal) modal.removeAttribute('aria-busy');
@@ -250,6 +261,7 @@
         if (!canFetch) {
             applyUi();
             syncPaymentStatus();
+            document.body.classList.remove('is-inline-loading');
             return;
         }
 
@@ -281,6 +293,7 @@
             .finally(function () {
                 applyUi();
                 syncPaymentStatus();
+                document.body.classList.remove('is-inline-loading');
             });
     }
 

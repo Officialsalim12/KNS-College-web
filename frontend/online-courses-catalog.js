@@ -331,6 +331,9 @@
         const loaderShownAt = Date.now();
         const minSpinnerMs = 450;
 
+        // Prevent scrolling while loading
+        document.body.classList.add('is-inline-loading');
+
         root.innerHTML =
             '<div class="catalog-loader" id="onlineCoursesCatalogLoader" role="status" aria-live="polite" aria-busy="true" aria-label="Loading courses">' +
             '<div class="uib-loader" aria-hidden="true"></div>' +
@@ -340,6 +343,7 @@
             const wait = Math.max(0, minSpinnerMs - (Date.now() - loaderShownAt));
             window.setTimeout(function () {
                 root.textContent = '';
+                document.body.classList.remove('is-inline-loading');
                 callback();
             }, wait);
         }
@@ -353,6 +357,7 @@
                         'Could not load courses. Make sure the API is running and run npm run db:setup.';
                     finishWith(function () {
                         setError(msg);
+                        document.body.classList.remove('is-inline-loading');
                         document.dispatchEvent(
                             new CustomEvent('kns-online-courses-loaded', { detail: { count: 0, error: true } })
                         );
@@ -368,6 +373,7 @@
                             result.data.message ||
                                 'No courses in the catalog yet. Run npm run db:seed on the server.'
                         );
+                        document.body.classList.remove('is-inline-loading');
                         document.dispatchEvent(
                             new CustomEvent('kns-online-courses-loaded', { detail: { count: 0 } })
                         );
@@ -382,6 +388,7 @@
             .catch(() => {
                 finishWith(function () {
                     setError('Could not reach the server. Check your connection and try again.');
+                    document.body.classList.remove('is-inline-loading');
                     document.dispatchEvent(
                         new CustomEvent('kns-online-courses-loaded', { detail: { count: 0, error: true } })
                     );
